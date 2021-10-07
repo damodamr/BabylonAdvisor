@@ -3,7 +3,7 @@ from rdflib import URIRef
 from rdflib.namespace import DC, DCTERMS, DOAP, FOAF, SKOS, OWL, RDF, RDFS, VOID, XMLNS
 
 g = Graph()
-g.parse("/Users/damir.juric/Downloads/advisor-ontologies-owl-REVISION-HEAD/urn_webprotege_ontology_27ee4c66-215c-4563-b64a-83d728653396.owl")
+g.parse("urn_webprotege_ontology_27ee4c66-215c-4563-b64a-83d728653396.owl")
 
 #for s, p, o in g.triples((None,  RDF.type, None)):
     #print(f"{s}   =    {g.value(s, RDFS.label)} is a {o}")
