@@ -47,7 +47,7 @@
                 {
                     "conceptID": "sbp20",
                     "label": "systolic blood pressure > 20 mmHg",
-                    "snomed": "271649006",
+                    "snomed": "unknown",
                     "isa": "observable entity"
                 },
                 {
