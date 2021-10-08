@@ -2,6 +2,9 @@ from rdflib import Graph, RDF, RDFS
 from rdflib import URIRef
 from rdflib.namespace import DC, DCTERMS, DOAP, FOAF, SKOS, OWL, RDF, RDFS, VOID, XMLNS
 
+from gql import gql, Client
+from gql.transport.aiohttp import AIOHTTPTransport
+
 g = Graph()
 g.parse("urn_webprotege_ontology_27ee4c66-215c-4563-b64a-83d728653396.owl")
 
@@ -20,6 +23,29 @@ first = URIRef("http://webprotege.stanford.edu/RZElLi8R8mkRSGGDLlahA9")
 process = URIRef("http://webprotege.stanford.edu/R7WEa3ShvTpTuqsAhGYqvHT")
 hasSnippet = URIRef("http://webprotege.stanford.edu/RDM9hbbAS4IdgwRvUbCKiMa")
 snomed = URIRef("http://webprotege.stanford.edu/R9MPy28obbWUhRYlvQ03Y4e")
+
+
+def queryHealtGraph():
+    
+    transport = AIOHTTPTransport(url="https://countries.trevorblades.com/")
+    client = Client(transport=transport, fetch_schema_from_transport=True)
+
+    # Provide a GraphQL query
+    query = gql(
+        """
+        query getContinents {
+          continents {
+            code
+            name
+          }
+        }
+    """
+    )
+
+    # Execute the query on the transport
+    result = client.execute(query)
+    print(result)
+    return result
 
 def printRequrementsList(action):
     # hasRequirements list
