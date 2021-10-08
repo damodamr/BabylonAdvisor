@@ -26,8 +26,8 @@ snomed = URIRef("http://webprotege.stanford.edu/R9MPy28obbWUhRYlvQ03Y4e")
 
 
 def queryHealtGraph():
-    
-    transport = AIOHTTPTransport(url="https://countries.trevorblades.com/")
+
+    transport = AIOHTTPTransport(url="https://services-uk.dev.babylontech.co.uk/chr-graphql-playground/graphql")
     client = Client(transport=transport, fetch_schema_from_transport=True)
 
     # Provide a GraphQL query
