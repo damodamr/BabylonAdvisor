@@ -3,7 +3,9 @@ from rdflib import URIRef
 from rdflib.namespace import DC, DCTERMS, DOAP, FOAF, SKOS, OWL, RDF, RDFS, VOID, XMLNS
 
 from gql import gql, Client
-from gql.transport.aiohttp import AIOHTTPTransport
+#from gql.transport.aiohttp import AIOHTTPTransport
+
+from graphqlclient import GraphQLClient
 
 g = Graph()
 g.parse("urn_webprotege_ontology_27ee4c66-215c-4563-b64a-83d728653396.owl")
@@ -15,8 +17,11 @@ g.parse("urn_webprotege_ontology_27ee4c66-215c-4563-b64a-83d728653396.owl")
 #mbox = g.value(hasRequirement, RDFS.label)
 #print(mbox)
 
+processes = URIRef("http://webprotege.stanford.edu/R9rhFHtwjxynjFMQdRdjICi")
+actions = URIRef("http://webprotege.stanford.edu/RBZhgoK8Qeirs0YZu2ad2Kh")
 action1 = URIRef("http://webprotege.stanford.edu/R9kYwMAmH3FSMhlDOlEeLOs") #checkup while standing
 action2 = URIRef("http://webprotege.stanford.edu/RCYsCDkpJ7XlNNgN93swd6C") #review medication and consider referral to specialist
+action3 = URIRef("http://webprotege.stanford.edu/RDpsnjoBFoSXZH9EhPMvMPh") #use automated device
 hasRequirement = URIRef("http://webprotege.stanford.edu/RC7Wq1yEcljB1N9YPUStQZg")
 next = URIRef("http://webprotege.stanford.edu/R7rMKTUfG8K7ryhfq0xDPyk")
 first = URIRef("http://webprotege.stanford.edu/RZElLi8R8mkRSGGDLlahA9")
@@ -24,8 +29,74 @@ process = URIRef("http://webprotege.stanford.edu/R7WEa3ShvTpTuqsAhGYqvHT")
 hasSnippet = URIRef("http://webprotege.stanford.edu/RDM9hbbAS4IdgwRvUbCKiMa")
 snomed = URIRef("http://webprotege.stanford.edu/R9MPy28obbWUhRYlvQ03Y4e")
 
+def hg():
+    client = GraphQLClient('http://graphql-swapi.parseapp.com/')
 
-def queryHealtGraph():
+    result = client.execute('''
+    {
+      allFilms {
+        films {
+          title
+        }
+      }
+    }
+    ''')
+
+    print(result)
+
+def queryHealthGraph2():
+
+    client = GraphQLClient('https://services-uk.dev.babylontech.co.uk/chr-graphql-playground/graphql')
+    result = client.execute('''
+             {
+                getMedicalRecord(member_uuid:"3ffae127-3396-4191-a2d3-d62e45c9b345") {
+                  condition(search: {
+                    code: {
+                      oneOf: [
+                        # Postural dizziness
+                        {system: "https://bbl.health", code: "ceFDa9tjhP"}
+                        # At risk of fall
+                        {system: "https://bbl.health", code: "G35ix9shep"}
+                        # Irregular pulse
+                        {system: "https://bbl.health", code: "ittZoUCEk8"}
+                        # Regular pulse
+                        {system: "https://bbl.health", code: "QCud6_5ml1"}
+                        # Type 2 diabetes mellitus
+                        {system: "https://bbl.health", code: "YoTs_GRdm8"}
+                        
+                        
+                      ]
+                    }
+                  }) {
+                    id
+                    code{
+                      coding{
+                        system
+                        code
+                        display
+                      }
+                    }
+                    verificationStatus {
+                      coding{
+                        system
+                        code
+                        display
+                      }
+                    }
+                    convertedCode {
+                      system
+                      code
+                      display
+                    }
+                  }
+                }
+              } -- verbose
+    ''')
+
+    print(result)
+
+
+def queryHealthGraph():
 
     transport = AIOHTTPTransport(url="https://services-uk.dev.babylontech.co.uk/chr-graphql-playground/graphql")
     client = Client(transport=transport, fetch_schema_from_transport=True)
@@ -33,12 +104,49 @@ def queryHealtGraph():
     # Provide a GraphQL query
     query = gql(
         """
-        query getContinents {
-          continents {
-            code
-            name
-          }
-        }
+        query {
+                getMedicalRecord(member_uuid:"3ffae127-3396-4191-a2d3-d62e45c9b345") {
+                  condition(search: {
+                    code: {
+                      oneOf: [
+                        # Postural dizziness
+                        {system: "https://bbl.health", code: "ceFDa9tjhP"}
+                        # At risk of fall
+                        {system: "https://bbl.health", code: "G35ix9shep"}
+                        # Irregular pulse
+                        {system: "https://bbl.health", code: "ittZoUCEk8"}
+                        # Regular pulse
+                        {system: "https://bbl.health", code: "QCud6_5ml1"}
+                        # Type 2 diabetes mellitus
+                        {system: "https://bbl.health", code: "YoTs_GRdm8"}
+
+
+                      ]
+                    }
+                  }) {
+                    id
+                    code{
+                      coding{
+                        system
+                        code
+                        display
+                      }
+                    }
+                    verificationStatus {
+                      coding{
+                        system
+                        code
+                        display
+                      }
+                    }
+                    convertedCode {
+                      system
+                      code
+                      display
+                    }
+                  }
+                }
+              }
     """
     )
 
@@ -46,6 +154,24 @@ def queryHealtGraph():
     result = client.execute(query)
     print(result)
     return result
+
+
+def getUriFromLabel(label):
+    for subj, pred, obj in g:
+        #print(g.value(subj, RDFS.label))
+        if str(g.value(subj, RDFS.label)) == str(label):
+            uri = subj
+    return uri
+
+def getAllLabels(g):
+    allLabels = []
+    for subj, pred, obj in g:
+        #print(g.value(subj, RDFS.label))
+        if g.value(subj, RDFS.subClassOf) == actions or g.value(subj, RDFS.subClassOf) == processes:
+            print(g.value(subj, RDFS.subClassOf))
+            if str(g.value(subj, RDFS.label)) not in ['None', 'next', 'first', 'hasRequirement']:
+                allLabels.append(str(g.value(subj, RDFS.label)))
+    return allLabels
 
 def printRequrementsList(action):
     # hasRequirements list
@@ -129,8 +255,8 @@ def printAllActionsInProcess(action):
         code = g.value(row.o, snomed)
         requirements = requrementsList(row.o)
         print("Next "+ labelType +" following the " + NextAction + " action is: " + f"{row.o}" + " - " + label)
-        print("     Action extended info: " + str(snippet))
-        print("     Action requirements: " + str(requirements))
+        #print("     Action extended info: " + str(snippet))
+        #print("     Action requirements: " + str(requirements))
         if row.o:
             printAllActionsInProcess(row.o)
         else:
@@ -181,10 +307,17 @@ def printActionInfo(action):
     return (label, requirements, snippet, code)
 
 
-printRequrementsList(action1)
+#printRequrementsList(action1)
 #printNextAction(action1)
-printFirstActionInProcess(process)
+#printFirstActionInProcess(process)
+printAllActionsInProcess(action3)
 #printNextProcess(process)
 #infos = printActionInfo(action2)
 #for el in infos:
     #print(el)
+    
+#print(getUriFromLabel("checkup while standing"))
+#queryHealthGraph2()
+#hg()
+
+print(getAllLabels(g))

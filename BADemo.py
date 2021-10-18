@@ -137,6 +137,4 @@ def main():
         st.write(startAction(cor[0]))
         st.write(startAction(cor[1]))
 
-
-
 main()
