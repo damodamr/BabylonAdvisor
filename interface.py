@@ -1,6 +1,8 @@
 import streamlit as st
 import json
 import graphviz as graphviz
+import os
+import requests
 
 from rdflib import Graph, RDF, RDFS
 from rdflib import URIRef
@@ -19,8 +21,73 @@ first = URIRef("http://webprotege.stanford.edu/RZElLi8R8mkRSGGDLlahA9")
 process = URIRef("http://webprotege.stanford.edu/R7WEa3ShvTpTuqsAhGYqvHT")
 hasSnippet = URIRef("http://webprotege.stanford.edu/RDM9hbbAS4IdgwRvUbCKiMa")
 snomed = URIRef("http://webprotege.stanford.edu/R9MPy28obbWUhRYlvQ03Y4e")
+babylonCode = URIRef("http://webprotege.stanford.edu/R5ZIuf9q1yLqSWjrbrh2AH")
 
 graph = graphviz.Digraph()
+
+def generate_service_token():
+    url = 'https://services-uk.dev.babylontech.co.uk/ai-auth/v1/internal'
+    header = {'Content-Type': 'application/json'}
+
+    client_id = os.environ.get('CLIENT_ID')
+    client_secret = os.environ.get('CLIENT_SECRET')
+
+    print(client_id)
+    print(client_secret)
+    data = {'client_id': client_id, 'client_secret': client_secret}
+    r = requests.post(url, headers=header, data=json.dumps(data))
+    print(r)
+    return json.loads(r.text)['access_token']
+
+
+def execute_HG_query(query):
+    token = generate_service_token()
+    url = 'https://services-uk.dev.babylontech.co.uk/chr/graphql'
+    headers = {'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json'}
+    r = requests.post(url, headers=headers, data=json.dumps(query))
+    return json.loads(r.text)
+
+
+def generate_reportedcondition_query(patient_uuid, codes):
+    query_string = """query {
+        getMedicalRecord(member_uuid: \"""" + patient_uuid + """\") {
+          condition(search: {
+            code: {
+              oneOf: 
+              ["""+codes+"""]  
+            }
+          }) {
+            id
+            code{
+              coding{
+                system
+                code
+                display
+              }
+            }
+            verificationStatus {
+              coding{
+                system
+                code
+                display
+              }
+            }
+      convertedCode {
+        display
+        system
+        }
+      }
+  }
+}"""
+    return {"query": query_string}
+
+def parseHGResults(results):
+    foundList = []
+    found = results['data']['getMedicalRecord']['condition']
+    for el in found:
+        print(el)
+        foundList.append(el['code']['coding'][0]['code'])
+    return foundList
 
 def getUriFromLabel(label):
     uri = "None"
@@ -29,6 +96,10 @@ def getUriFromLabel(label):
         if str(g.value(subj, RDFS.label)) == str(label):
             uri = subj
     return uri
+
+def getBabylonCodeFromUri(uri):
+    code = g.value(uri,babylonCode)
+    return code
 
 def getAllActionLabels(g):
     allActionLabels = set()
@@ -67,14 +138,20 @@ def printRequrementsList(action):
     RequirementsAction = g.value(action, RDFS.label)
     print("Requirements necessary for "+ str(RequirementsAction) + " action to be advised!")
     reqs = []
+    codes = ""
+    system = "https://bbl.health"
     for row in hasRequirementObject:
         print(f"{row.o}")
         print(g.value(row.o, RDFS.label))
         reqs.append(str(g.value(row.o, RDFS.label)))
+        co = str(g.value(row.o, babylonCode))
+        print(co)
+        codeString = "{system:\""+system+"\", code:\""+str(co).rstrip()+"\"}, "
+        codes = codes + codeString
 
 
     print("-------------------------------------------------------------")
-    return(reqs)
+    return(reqs, codes)
 
 def requrementsList(action):
     # hasRequirements list
@@ -206,7 +283,7 @@ def printActionInfo(action):
     return (label, requirements, snippet, code)
 
 
-def show(reqs, patient_contextAction, patient_type):
+def show(reqs, patient_contextAction, patient_type, foundInHG):
     st.write(
         """
         ## ✅ Requirements list for: """ + patient_contextAction + """ for: """ + patient_type +
@@ -216,8 +293,14 @@ def show(reqs, patient_contextAction, patient_type):
     )
     reqList = []
     for el in reqs:
-        reqEl = {"description": el, "done": True}
-        reqList.append(reqEl)
+        uriTemp = getUriFromLabel(el)
+        el2 = str(getBabylonCodeFromUri(uriTemp))
+        if el2 in foundInHG:
+            reqEl = {"description": el, "done": True}
+            reqList.append(reqEl)
+        else:
+            reqEl = {"description": el, "done": False}
+            reqList.append(reqEl)
 
     # Define initial state.
     # if "todos" not in st.session_state:
@@ -273,15 +356,15 @@ def main():
     st.sidebar.title('Babylon Advisor')
     st.sidebar.markdown("""Use the dropdown to select the guideline and patient data""")
     st.markdown("")
-    guideline_type = st.sidebar.selectbox(
-        'Select the guideline',
-        ('','Blood pressure measurement', 'more to come...'),
-        index=0
-    )
+    # guideline_type = st.sidebar.selectbox(
+    #     'Select the guideline',
+    #     ('','Blood pressure measurement', 'more to come...'),
+    #     index=0
+    # )
 
     patient_type = st.sidebar.selectbox(
         'Load patient data from HealthGraph',
-        ('','Patient A', 'Patient B', 'Patient C', 'Patient D'),
+        ('','Mo', 'Layla', 'Alex'),
         index=1
     )
 
@@ -294,9 +377,24 @@ def main():
 
     uri = getUriFromLabel(patient_contextAction)
 
-    reqs = printRequrementsList(uri)
+    reqs, codes = printRequrementsList(uri)
     if reqs:
-        show(reqs,patient_contextAction, patient_type)
+        if patient_type == "Alex":
+            patient_type = "235173f5-1866-4de6-9c53-8b82de10c347"
+        query = generate_reportedcondition_query(patient_type, str(codes))
+        result = execute_HG_query(query)
+        foundInHG = parseHGResults(result)
+        if patient_type == "235173f5-1866-4de6-9c53-8b82de10c347":
+            patient_type = "Alex"
+        show(reqs,patient_contextAction, patient_type, foundInHG)
+        my_expander = st.expander(label='See the query sent to HealthGraph')
+        with my_expander:
+            query
+        st.markdown("")
+        #st.write(result)
+        my_expander = st.expander(label='See the HealthGraph output')
+        with my_expander:
+            result
 
 
     if st.sidebar.button('Show next best action for selected action for: ' + patient_type):

@@ -1,6 +1,9 @@
 from rdflib import Graph, RDF, RDFS
 from rdflib import URIRef
 from rdflib.namespace import DC, DCTERMS, DOAP, FOAF, SKOS, OWL, RDF, RDFS, VOID, XMLNS
+import os
+import requests
+import json
 
 from gql import gql, Client
 #from gql.transport.aiohttp import AIOHTTPTransport
@@ -22,138 +25,74 @@ actions = URIRef("http://webprotege.stanford.edu/RBZhgoK8Qeirs0YZu2ad2Kh")
 action1 = URIRef("http://webprotege.stanford.edu/R9kYwMAmH3FSMhlDOlEeLOs") #checkup while standing
 action2 = URIRef("http://webprotege.stanford.edu/RCYsCDkpJ7XlNNgN93swd6C") #review medication and consider referral to specialist
 action3 = URIRef("http://webprotege.stanford.edu/RDpsnjoBFoSXZH9EhPMvMPh") #use automated device
+action4 = URIRef("http://webprotege.stanford.edu/RY2zFMWhCpW2dBbQ9cQwlw")#checkup while lying down
 hasRequirement = URIRef("http://webprotege.stanford.edu/RC7Wq1yEcljB1N9YPUStQZg")
 next = URIRef("http://webprotege.stanford.edu/R7rMKTUfG8K7ryhfq0xDPyk")
 first = URIRef("http://webprotege.stanford.edu/RZElLi8R8mkRSGGDLlahA9")
 process = URIRef("http://webprotege.stanford.edu/R7WEa3ShvTpTuqsAhGYqvHT")
 hasSnippet = URIRef("http://webprotege.stanford.edu/RDM9hbbAS4IdgwRvUbCKiMa")
 snomed = URIRef("http://webprotege.stanford.edu/R9MPy28obbWUhRYlvQ03Y4e")
+babylonCode = URIRef("http://webprotege.stanford.edu/R5ZIuf9q1yLqSWjrbrh2AH")
 
-def hg():
-    client = GraphQLClient('http://graphql-swapi.parseapp.com/')
+def generate_service_token():
+    url = 'https://services-uk.dev.babylontech.co.uk/ai-auth/v1/internal'
+    header = {'Content-Type': 'application/json'}
 
-    result = client.execute('''
-    {
-      allFilms {
-        films {
-          title
+    client_id = os.environ.get('CLIENT_ID')
+    client_secret = os.environ.get('CLIENT_SECRET')
+    client_id = "1M1m7EKIyUg6e3xdDWJQEFBt4a3F3uyE"
+    client_secret = "42drt7aEQTfWLnThhsJ5woWJmYkFJwN0bmKXz38rKjGmseW3d31aavY4q7ZLMiSN"
+    print(client_id)
+    print(client_secret)
+    data = {'client_id': client_id, 'client_secret': client_secret}
+    r = requests.post(url, headers=header, data=json.dumps(data))
+    print(r)
+    return json.loads(r.text)['access_token']
+
+
+def execute_HG_query(query):
+    token = generate_service_token()
+    url = 'https://services-uk.dev.babylontech.co.uk/chr/graphql'
+    headers = {'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json'}
+    r = requests.post(url, headers=headers, data=json.dumps(query))
+    return json.loads(r.text)
+
+
+def generate_reportedcondition_query(patient_uuid, codes):
+    query_string = """query {
+        getMedicalRecord(member_uuid: \"""" + patient_uuid + """\") {
+          condition(search: {
+            code: {
+              oneOf: 
+              ["""+codes+"""]  
+            }
+          }) {
+            id
+            code{
+              coding{
+                system
+                code
+                display
+              }
+            }
+            verificationStatus {
+              coding{
+                system
+                code
+                display
+              }
+            }
+      convertedCode {
+        display
+        system
         }
       }
-    }
-    ''')
-
-    print(result)
-
-def queryHealthGraph2():
-
-    client = GraphQLClient('https://services-uk.dev.babylontech.co.uk/chr-graphql-playground/graphql')
-    result = client.execute('''
-             {
-                getMedicalRecord(member_uuid:"3ffae127-3396-4191-a2d3-d62e45c9b345") {
-                  condition(search: {
-                    code: {
-                      oneOf: [
-                        # Postural dizziness
-                        {system: "https://bbl.health", code: "ceFDa9tjhP"}
-                        # At risk of fall
-                        {system: "https://bbl.health", code: "G35ix9shep"}
-                        # Irregular pulse
-                        {system: "https://bbl.health", code: "ittZoUCEk8"}
-                        # Regular pulse
-                        {system: "https://bbl.health", code: "QCud6_5ml1"}
-                        # Type 2 diabetes mellitus
-                        {system: "https://bbl.health", code: "YoTs_GRdm8"}
-                        
-                        
-                      ]
-                    }
-                  }) {
-                    id
-                    code{
-                      coding{
-                        system
-                        code
-                        display
-                      }
-                    }
-                    verificationStatus {
-                      coding{
-                        system
-                        code
-                        display
-                      }
-                    }
-                    convertedCode {
-                      system
-                      code
-                      display
-                    }
-                  }
-                }
-              } -- verbose
-    ''')
-
-    print(result)
+  }
+}"""
+    return {"query": query_string}
 
 
-def queryHealthGraph():
 
-    transport = AIOHTTPTransport(url="https://services-uk.dev.babylontech.co.uk/chr-graphql-playground/graphql")
-    client = Client(transport=transport, fetch_schema_from_transport=True)
-
-    # Provide a GraphQL query
-    query = gql(
-        """
-        query {
-                getMedicalRecord(member_uuid:"3ffae127-3396-4191-a2d3-d62e45c9b345") {
-                  condition(search: {
-                    code: {
-                      oneOf: [
-                        # Postural dizziness
-                        {system: "https://bbl.health", code: "ceFDa9tjhP"}
-                        # At risk of fall
-                        {system: "https://bbl.health", code: "G35ix9shep"}
-                        # Irregular pulse
-                        {system: "https://bbl.health", code: "ittZoUCEk8"}
-                        # Regular pulse
-                        {system: "https://bbl.health", code: "QCud6_5ml1"}
-                        # Type 2 diabetes mellitus
-                        {system: "https://bbl.health", code: "YoTs_GRdm8"}
-
-
-                      ]
-                    }
-                  }) {
-                    id
-                    code{
-                      coding{
-                        system
-                        code
-                        display
-                      }
-                    }
-                    verificationStatus {
-                      coding{
-                        system
-                        code
-                        display
-                      }
-                    }
-                    convertedCode {
-                      system
-                      code
-                      display
-                    }
-                  }
-                }
-              }
-    """
-    )
-
-    # Execute the query on the transport
-    result = client.execute(query)
-    print(result)
-    return result
 
 
 def getUriFromLabel(label):
@@ -187,13 +126,20 @@ def printRequrementsList(action):
     RequirementsAction = g.value(action, RDFS.label)
     print("Requirements necessary for "+ RequirementsAction + " action to be advised!")
     reqs = []
+    codes = ""
+    system = "https://bbl.health"
     for row in hasRequirementObject:
         print(f"{row.o}")
         print(g.value(row.o, RDFS.label))
+        co = str(g.value(row.o, babylonCode))
+        print(co)
         reqs.append(str(g.value(row.o, RDFS.label)))
+        codeString = "{system:\""+system+"\", code:\""+str(co).rstrip()+"\"}, "
+        codes = codes + codeString
 
+    print(str(codes))
     print("-------------------------------------------------------------")
-    return(reqs)
+    return(reqs,str(codes))
 
 def requrementsList(action):
     # hasRequirements list
@@ -310,7 +256,7 @@ def printActionInfo(action):
 #printRequrementsList(action1)
 #printNextAction(action1)
 #printFirstActionInProcess(process)
-printAllActionsInProcess(action3)
+#printAllActionsInProcess(action3)
 #printNextProcess(process)
 #infos = printActionInfo(action2)
 #for el in infos:
@@ -320,4 +266,8 @@ printAllActionsInProcess(action3)
 #queryHealthGraph2()
 #hg()
 
-print(getAllLabels(g))
+#print(getAllLabels(g))
+reqs, codes = printRequrementsList(action4)
+query = generate_reportedcondition_query("235173f5-1866-4de6-9c53-8b82de10c347", str(codes))
+result = execute_HG_query(query)
+print(result)
