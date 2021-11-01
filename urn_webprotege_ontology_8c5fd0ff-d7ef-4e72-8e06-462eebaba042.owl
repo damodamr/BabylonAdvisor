@@ -1,0 +1,521 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="urn:webprotege:ontology:8c5fd0ff-d7ef-4e72-8e06-462eebaba042#"
+     xml:base="urn:webprotege:ontology:8c5fd0ff-d7ef-4e72-8e06-462eebaba042"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:webprotege="http://webprotege.stanford.edu/">
+    <owl:Ontology rdf:about="urn:webprotege:ontology:8c5fd0ff-d7ef-4e72-8e06-462eebaba042"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://webprotege.stanford.edu/R9DtWPVELKDzTWPxZMDPCZb -->
+
+    <owl:AnnotationProperty rdf:about="http://webprotege.stanford.edu/R9DtWPVELKDzTWPxZMDPCZb">
+        <rdfs:label>hasSnippet</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBF8Invk9dtsgp4wQD68WeA -->
+
+    <owl:AnnotationProperty rdf:about="http://webprotege.stanford.edu/RBF8Invk9dtsgp4wQD68WeA">
+        <rdfs:label>babylon</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBKs6yN9NObdBCEiziFKaJM -->
+
+    <owl:AnnotationProperty rdf:about="http://webprotege.stanford.edu/RBKs6yN9NObdBCEiziFKaJM">
+        <rdfs:label>unit</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RCxRbA67sAZNNYGFNDdGHUe -->
+
+    <owl:AnnotationProperty rdf:about="http://webprotege.stanford.edu/RCxRbA67sAZNNYGFNDdGHUe">
+        <rdfs:label>snomed</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label>hasRequirement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBX9yM6PnHMZmCut0ANkwK2 -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/RBX9yM6PnHMZmCut0ANkwK2">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label>next</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RCYcJMTsWRUnM4fNdRyRf4S -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/RCYcJMTsWRUnM4fNdRyRf4S">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">first</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RDuXbIDxtVhZiI5TPwjwXL4 -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/RDuXbIDxtVhZiI5TPwjwXL4">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label>hasAgeRequirement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://webprotege.stanford.edu/R50cgppKmTD8CUgL7h0di2 -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/R50cgppKmTD8CUgL7h0di2">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <webprotege:RBKs6yN9NObdBCEiziFKaJM rdf:datatype="http://www.w3.org/2001/XMLSchema#string">day</webprotege:RBKs6yN9NObdBCEiziFKaJM>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">actionIntervalInDays</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R9yiLJcwuXGzG7F5DskM41U -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/R9yiLJcwuXGzG7F5DskM41U">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <webprotege:RBKs6yN9NObdBCEiziFKaJM rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minute</webprotege:RBKs6yN9NObdBCEiziFKaJM>
+        <rdfs:label>actionLengthInMinutes</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RB0DOKdI9Zaubwq2uzdoChN -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/RB0DOKdI9Zaubwq2uzdoChN">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <webprotege:RBKs6yN9NObdBCEiziFKaJM rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Day</webprotege:RBKs6yN9NObdBCEiziFKaJM>
+        <rdfs:label>actionLengthInDays</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7AoTIWw5I4W2asgvuzeJ1j -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R7AoTIWw5I4W2asgvuzeJ1j">
+        <rdfs:label>finding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7JIAyvXh6cPtQsOlCnvlqO -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R7JIAyvXh6cPtQsOlCnvlqO">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Rk3YLsMnUvjlpQFbHZaOwb"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBXUleTltJDn3IBLxk0G9KW"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCvTYcvqROUfXdZhwtTXnyy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBX9yM6PnHMZmCut0ANkwK2"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBKI3nhBTJW0LvT9MoBcGE7"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R50cgppKmTD8CUgL7h0di2"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RB0DOKdI9Zaubwq2uzdoChN"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Examples of muscle-strengthening activities include lifting weights, working with resistance bands, exercises that use body weight for resistance (such as push-ups, pull-ups, and planks), carrying heavy loads, and heavy gardening.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
+        <rdfs:label>Total body muscle strengthening exercise at least two days per week</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R8GEtymGxzvMgLrqyzcD14J -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R8GEtymGxzvMgLrqyzcD14J">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Rk3YLsMnUvjlpQFbHZaOwb"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBXUleTltJDn3IBLxk0G9KW"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCvTYcvqROUfXdZhwtTXnyy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBX9yM6PnHMZmCut0ANkwK2"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDJu4d1rOWQHxYrrwrL6985"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBX9yM6PnHMZmCut0ANkwK2"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RfuWvsuWjiiuXE267MJYly"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R9yiLJcwuXGzG7F5DskM41U"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vigorous aerobic exercise for at least 75 minutes. Examples of vigorous physical activity include jogging, hiking, fast cycling, or playing sports like soccer (or football if in the UK) or basketball. You would have to pause and take a breath after a few words during vigorous physical activity.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vigorous aerobic exercise &lt; 75 minutes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R94b2ufyejFSwsqqtwNEWA4 -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R94b2ufyejFSwsqqtwNEWA4">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RBdZ9PjAPQbwHzyQfZFeimJ"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RCYcJMTsWRUnM4fNdRyRf4S"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8GEtymGxzvMgLrqyzcD14J"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RCYcJMTsWRUnM4fNdRyRf4S"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCq3BGTw0npB5LMUoVaHMy0"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Optimising physical activity for adults with anxiety</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBKI3nhBTJW0LvT9MoBcGE7 -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RBKI3nhBTJW0LvT9MoBcGE7">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Rk3YLsMnUvjlpQFbHZaOwb"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBXUleTltJDn3IBLxk0G9KW"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCvTYcvqROUfXdZhwtTXnyy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RV7MXYVd9mWZbKaOGoTWJy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This includes balance training as well as aerobic and muscle-strengthening activities</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
+        <rdfs:label>Multicomponent physical activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBN34Fk8LfGVGjzvP2svABM -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RBN34Fk8LfGVGjzvP2svABM">
+        <rdfs:label>formulas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBXUleTltJDn3IBLxk0G9KW -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RBXUleTltJDn3IBLxk0G9KW">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R7AoTIWw5I4W2asgvuzeJ1j"/>
+        <webprotege:RBF8Invk9dtsgp4wQD68WeA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aKkt9Nd8uh</webprotege:RBF8Invk9dtsgp4wQD68WeA>
+        <webprotege:RCxRbA67sAZNNYGFNDdGHUe rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21897009</webprotege:RCxRbA67sAZNNYGFNDdGHUe>
+        <rdfs:label>Generalized Anxiety Disorder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBdZ9PjAPQbwHzyQfZFeimJ -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RBdZ9PjAPQbwHzyQfZFeimJ">
+        <rdfs:label>process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RCq3BGTw0npB5LMUoVaHMy0 -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RCq3BGTw0npB5LMUoVaHMy0">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Rk3YLsMnUvjlpQFbHZaOwb"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBXUleTltJDn3IBLxk0G9KW"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCvTYcvqROUfXdZhwtTXnyy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBX9yM6PnHMZmCut0ANkwK2"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDJu4d1rOWQHxYrrwrL6985"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBX9yM6PnHMZmCut0ANkwK2"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RfuWvsuWjiiuXE267MJYly"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R9yiLJcwuXGzG7F5DskM41U"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">150-</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moderate intensity aerobic exercise for at least 150 minutes. Examples of moderate physical activity include brisk walking, light cycling, mowing the lawn, and heavy cleaning. You could talk but not sing during moderate physical activity.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moderate intensity aerobic exercise &lt; 150 minutes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RBN34Fk8LfGVGjzvP2svABM"/>
+        <webprotege:RBKs6yN9NObdBCEiziFKaJM rdf:datatype="http://www.w3.org/2001/XMLSchema#string">year</webprotege:RBKs6yN9NObdBCEiziFKaJM>
+        <rdfs:label>X&gt;18</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RCvTYcvqROUfXdZhwtTXnyy -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RCvTYcvqROUfXdZhwtTXnyy">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R7AoTIWw5I4W2asgvuzeJ1j"/>
+        <webprotege:RBF8Invk9dtsgp4wQD68WeA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m8tNjSMjkK</webprotege:RBF8Invk9dtsgp4wQD68WeA>
+        <webprotege:RCxRbA67sAZNNYGFNDdGHUe rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">366121000000108</webprotege:RCxRbA67sAZNNYGFNDdGHUe>
+        <rdfs:label>inactive</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RDJu4d1rOWQHxYrrwrL6985 -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RDJu4d1rOWQHxYrrwrL6985">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Rk3YLsMnUvjlpQFbHZaOwb"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBXUleTltJDn3IBLxk0G9KW"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBX9yM6PnHMZmCut0ANkwK2"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDaQWw3k9HWCyByV83mWqjK"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R9yiLJcwuXGzG7F5DskM41U"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">75+</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Examples of vigorous physical activity include jogging, hiking, fast cycling, or playing sports like soccer (or football if in the UK) or basketball. You would have to pause and take a breath after a few words during vigorous physical activity.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
+        <rdfs:label>Vigorous aerobic exercise &gt; 75 minutes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RDaQWw3k9HWCyByV83mWqjK -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RDaQWw3k9HWCyByV83mWqjK">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Rk3YLsMnUvjlpQFbHZaOwb"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBXUleTltJDn3IBLxk0G9KW"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBX9yM6PnHMZmCut0ANkwK2"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7JIAyvXh6cPtQsOlCnvlqO"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R9yiLJcwuXGzG7F5DskM41U"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">300+</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Examples of moderate physical activity include brisk walking, light cycling, mowing the lawn, and heavy cleaning. You could talk but not sing during moderate physical activity.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
+        <rdfs:label>Moderate physical activity for &gt; 300 minutes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RV7MXYVd9mWZbKaOGoTWJy -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RV7MXYVd9mWZbKaOGoTWJy">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RBN34Fk8LfGVGjzvP2svABM"/>
+        <webprotege:RBKs6yN9NObdBCEiziFKaJM rdf:datatype="http://www.w3.org/2001/XMLSchema#string">year</webprotege:RBKs6yN9NObdBCEiziFKaJM>
+        <rdfs:label>X&gt;64</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RfuWvsuWjiiuXE267MJYly -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RfuWvsuWjiiuXE267MJYly">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Rk3YLsMnUvjlpQFbHZaOwb"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBXUleTltJDn3IBLxk0G9KW"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBX9yM6PnHMZmCut0ANkwK2"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDaQWw3k9HWCyByV83mWqjK"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R9yiLJcwuXGzG7F5DskM41U"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Examples of moderate physical activity include brisk walking, light cycling, mowing the lawn, and heavy cleaning. You could talk but not sing during moderate physical activity.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
+        <rdfs:label>Moderate intensity aerobic exercise &gt; 150 minutes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/Rk3YLsMnUvjlpQFbHZaOwb -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/Rk3YLsMnUvjlpQFbHZaOwb">
+        <rdfs:label>action</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.13) https://github.com/owlcs/owlapi -->
+

@@ -267,7 +267,33 @@ def printActionInfo(action):
 #hg()
 
 #print(getAllLabels(g))
-reqs, codes = printRequrementsList(action4)
-query = generate_reportedcondition_query("235173f5-1866-4de6-9c53-8b82de10c347", str(codes))
-result = execute_HG_query(query)
-print(result)
+# reqs, codes = printRequrementsList(action4)
+# query = generate_reportedcondition_query("235173f5-1866-4de6-9c53-8b82de10c347", str(codes))
+# result = execute_HG_query(query)
+# print(result)
+
+def printActionLabels():
+    hasActionLabels = g.query("""
+        SELECT ?x 
+            WHERE { 
+            ?x <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://webprotege.stanford.edu/RBZhgoK8Qeirs0YZu2ad2Kh> .
+            }
+    """)
+    for row in hasActionLabels:
+        label = g.value(row.x, RDFS.label)
+        print(label)
+
+print(printActionLabels())
+
+def printProcessLabels():
+    hasProcessLabels = g.query("""
+        SELECT ?x 
+            WHERE { 
+            ?x <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://webprotege.stanford.edu/R9rhFHtwjxynjFMQdRdjICi> .
+            }
+    """)
+    for row in hasProcessLabels:
+        label = g.value(row.x, RDFS.label)
+        print(label)
+print(printProcessLabels())
+
