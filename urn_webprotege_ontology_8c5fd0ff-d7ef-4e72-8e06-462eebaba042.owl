@@ -22,6 +22,14 @@
     
 
 
+    <!-- http://webprotege.stanford.edu/R99moybml6TSD1LLkudrBTe -->
+
+    <owl:AnnotationProperty rdf:about="http://webprotege.stanford.edu/R99moybml6TSD1LLkudrBTe">
+        <rdfs:label>provenance</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://webprotege.stanford.edu/R9DtWPVELKDzTWPxZMDPCZb -->
 
     <owl:AnnotationProperty rdf:about="http://webprotege.stanford.edu/R9DtWPVELKDzTWPxZMDPCZb">
@@ -122,6 +130,14 @@
     
 
 
+    <!-- http://webprotege.stanford.edu/R8WEgMIwpunVXfyrDpAEmr1 -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/R8WEgMIwpunVXfyrDpAEmr1">
+        <rdfs:label>hasAgeRequirementx</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://webprotege.stanford.edu/R9yiLJcwuXGzG7F5DskM41U -->
 
     <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/R9yiLJcwuXGzG7F5DskM41U">
@@ -153,9 +169,119 @@
     
 
 
+    <!-- http://webprotege.stanford.edu/R383YX9iOJRGPeCAGVVuaj -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R383YX9iOJRGPeCAGVVuaj">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Rk3YLsMnUvjlpQFbHZaOwb"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBm0OmTRh9TZw8vdchtiIHL"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBX9yM6PnHMZmCut0ANkwK2"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7JIAyvXh6cPtQsOlCnvlqO"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBX9yM6PnHMZmCut0ANkwK2"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDCxUze7MgNZXtAsI9ivSTs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RDuXbIDxtVhZiI5TPwjwXL4"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R50cgppKmTD8CUgL7h0di2"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R9yiLJcwuXGzG7F5DskM41U"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strong scientifc evidence shows that physical activity protects against heart disease, the leading cause of death in people with type 2 diabetes, and can reduce risk of death by 30 to 40 percent. Physical activity helps protect against heart disease and factors related to the progression of type 2 diabetes by helping to reduce the risk factors of high blood pressure, body weight, blood lipids (cholesterol), and elevated hemoglobin A1c in people with type 2 diabetes. The benefcial effects on blood glucose (indicated by hemoglobin A1c) may also reduce other complications of type 2 diabetes. Moderate-intensity activity for at least 150 minutes a week plus 2 days a week of muscle-strengthening activities help to substantially lower the risk of heart disease. A person who moves toward 300 minutes or more of moderate-intensity activity a week gets even greater beneft. Adults with a chronic condition should work with a health care professional or physical activity specialist to adapt physical activity so it is appropriate for their condition. For example, people with diabetes must be especially careful about monitoring their blood glucose, choosing appropriate footwear, and avoiding injury to their feet.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
+        <rdfs:label>Moderate-intensity aerobic physical activity &gt; 150 minutes per week (Diabetes type 2 guideline)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R5KFKLPyLUgB3rbDmvBhub -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R5KFKLPyLUgB3rbDmvBhub">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Rk3YLsMnUvjlpQFbHZaOwb"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R90j3XBf3gjUyXPbwBrqwLj"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R50cgppKmTD8CUgL7h0di2"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R9yiLJcwuXGzG7F5DskM41U"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">150-</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Women should do at least 150 minutes (2 hours and 30 minutes) of moderate-intensity aerobic activity a week during pregnancy and the postpartum period. Preferably, aerobic activity should be spread throughout the week. Women who habitually engaged in vigorous-intensity aerobic activity or who were physically active before pregnancy can continue these activities during pregnancy and the postpartum period. Women who are pregnant should be under the care of a health care provider who can monitor the progress of the pregnancy. Women who are pregnant can consult their health care provider about whether or how to adjust their physical activity during pregnancy and after the baby is born. Women should avoid doing exercises that involve lying on their back after the frst trimester of pregnancy because this position can restrict blood fow to the uterus and fetus. They should also avoid participating in contact or collision sports and activities with high risk of falling or abdominal trauma, such as soccer, basketball, horseback riding, or downhill skiing. They should also avoid participating in contact or collision sports and activities with high risk of falling or abdominal trauma, such as soccer, basketball, horseback riding, or downhill skiing.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
+        <rdfs:label>Moderate-intensity aerobic physical exercise at least 150 minutes per week (pregnancy)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7515A6Ep6Ye8xYnRz0m9jR -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R7515A6Ep6Ye8xYnRz0m9jR">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RBdZ9PjAPQbwHzyQfZFeimJ"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBO8Me9bjhdZ9egd8Vgwezx"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RCYcJMTsWRUnM4fNdRyRf4S"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RnBJTPozNVjp5OY98eXF2P"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RDuXbIDxtVhZiI5TPwjwXL4"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <webprotege:R99moybml6TSD1LLkudrBTe rdf:resource="https://health.gov/sites/default/files/2019-09/Physical_Activity_Guidelines_2nd_edition.pdf"/>
+        <rdfs:label>Optimising Physical Activity for adults with Osteoarthritis</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://webprotege.stanford.edu/R7AoTIWw5I4W2asgvuzeJ1j -->
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/R7AoTIWw5I4W2asgvuzeJ1j">
+        <webprotege:RBF8Invk9dtsgp4wQD68WeA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kQqYovX2pS</webprotege:RBF8Invk9dtsgp4wQD68WeA>
+        <webprotege:RCxRbA67sAZNNYGFNDdGHUe rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">404684003</webprotege:RCxRbA67sAZNNYGFNDdGHUe>
         <rdfs:label>finding</rdfs:label>
     </owl:Class>
     
@@ -167,20 +293,59 @@
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Rk3YLsMnUvjlpQFbHZaOwb"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
-                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBXUleTltJDn3IBLxk0G9KW"/>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R50cgppKmTD8CUgL7h0di2"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
-                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RB0DOKdI9Zaubwq2uzdoChN"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Examples of muscle-strengthening activities include lifting weights, working with resistance bands, doing calisthenics that use body weight for resistance (such as push-ups, pull-ups, and planks), carrying heavy loads, and heavy gardening. No specific amount of time is recommended for muscle strengthening, but muscle-strengthening exercises should be performed to the point at which it would be difficult to do another repetition.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
+        <rdfs:label>Total body muscle strengthening exercise at least two days per week</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7K4hu69M8P9tnsveW3mcxm -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R7K4hu69M8P9tnsveW3mcxm">
+        <webprotege:RBF8Invk9dtsgp4wQD68WeA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7hIr6BA14M</webprotege:RBF8Invk9dtsgp4wQD68WeA>
+        <webprotege:RCxRbA67sAZNNYGFNDdGHUe rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">362981000</webprotege:RCxRbA67sAZNNYGFNDdGHUe>
+        <rdfs:label>Qualifier Value (qualifier value)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7XvH7sM95tEyUt1ilujtY4 -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R7XvH7sM95tEyUt1ilujtY4">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R9mnqUZmufdpuIwLBJXxHLY"/>
+        <webprotege:RCxRbA67sAZNNYGFNDdGHUe rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">161615003</webprotege:RCxRbA67sAZNNYGFNDdGHUe>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">History of surgery (situation)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7YxZWUY8kDcEKBKGLsJNJ5 -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R7YxZWUY8kDcEKBKGLsJNJ5">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R9ZsVb8GA3W7d0bW5TaM3DM"/>
+        <rdfs:label>Cerebrovascular accident (disorder)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7dg1JjRGx6qnwZJZCLbodg -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R7dg1JjRGx6qnwZJZCLbodg">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Rk3YLsMnUvjlpQFbHZaOwb"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
-                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCvTYcvqROUfXdZhwtTXnyy"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RGDw2gR2NZ6ht7uoAdXWbR"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -197,12 +362,21 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RB0DOKdI9Zaubwq2uzdoChN"/>
-                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R9yiLJcwuXGzG7F5DskM41U"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">45-</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Examples of muscle-strengthening activities include lifting weights, working with resistance bands, exercises that use body weight for resistance (such as push-ups, pull-ups, and planks), carrying heavy loads, and heavy gardening.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
-        <rdfs:label>Total body muscle strengthening exercise at least two days per week</rdfs:label>
+        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In frail adults, strong evidence demonstrates that physical function can be improved with regular physical activity. Physical activity can contribute to improved walking and gait, balance, strength, self-reported measures of activities of daily living, and quality of life. Multicomponent physical activity of at least moderate intensity that is performed 3 or more times a week for a duration of 30 to 45 minutes per session, over at least 3 to 5 months, appears most effective to increase functional ability in frail older adults. Multicomponent physical activity programs are more effective than doing just a single type of physical activity.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physical Activity Guidelines (Frailty)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R84biDlgk2n4QptR0k030gO -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R84biDlgk2n4QptR0k030gO">
+        <webprotege:RCxRbA67sAZNNYGFNDdGHUe rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">243796009</webprotege:RCxRbA67sAZNNYGFNDdGHUe>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Situation with explicit context (situation)</rdfs:label>
     </owl:Class>
     
 
@@ -219,14 +393,8 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
-                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
-                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCvTYcvqROUfXdZhwtTXnyy"/>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBX9yM6PnHMZmCut0ANkwK2"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7JIAyvXh6cPtQsOlCnvlqO"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -243,12 +411,75 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R9yiLJcwuXGzG7F5DskM41U"/>
-                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</owl:hasValue>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RDuXbIDxtVhZiI5TPwjwXL4"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vigorous aerobic exercise for at least 75 minutes. Examples of vigorous physical activity include jogging, hiking, fast cycling, or playing sports like soccer (or football if in the UK) or basketball. You would have to pause and take a breath after a few words during vigorous physical activity.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vigorous aerobic exercise &lt; 75 minutes</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R9yiLJcwuXGzG7F5DskM41U"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">75-</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vigorous-intensity aerobic physical activity for at least 75 minutes. Examples of vigorous-intensity aerobic physical activity include  jogging, running, carrying heavy groceries or other loads upstairs, shoveling snow, or participating in a strenuous fitness class. In general, if you’re doing vigorous-intensity activity, you will not be able to say more than a few words without pausing for a breath.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vigorous-intensity aerobic physical activity &lt; 75 minutes per week (anxiety)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R8Ogfb5zoAbEZON9HmE9X5o -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R8Ogfb5zoAbEZON9HmE9X5o">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDKXSzF13KrasWQv3Amyki3"/>
+        <webprotege:RBF8Invk9dtsgp4wQD68WeA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OdN6uEzGja</webprotege:RBF8Invk9dtsgp4wQD68WeA>
+        <webprotege:RCxRbA67sAZNNYGFNDdGHUe rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">49049000</webprotege:RCxRbA67sAZNNYGFNDdGHUe>
+        <rdfs:label>Parkinsons Disease (disorder)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R8Pqdnsyusj5wk5nsgTmXqR -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R8Pqdnsyusj5wk5nsgTmXqR">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RBdZ9PjAPQbwHzyQfZFeimJ"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RgkBJLoGTTDoPvtAsVv6OS"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RCYcJMTsWRUnM4fNdRyRf4S"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RRNdiFIbDAKXelm3vu558S"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RCYcJMTsWRUnM4fNdRyRf4S"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/Rq6AZAjwMmkXSg5cAeuRrG"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RDuXbIDxtVhZiI5TPwjwXL4"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <webprotege:R99moybml6TSD1LLkudrBTe rdf:resource="https://health.gov/sites/default/files/2019-09/Physical_Activity_Guidelines_2nd_edition.pdf"/>
+        <rdfs:label>Optimising physical activity for adults with hypertension</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R90j3XBf3gjUyXPbwBrqwLj -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R90j3XBf3gjUyXPbwBrqwLj">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R7AoTIWw5I4W2asgvuzeJ1j"/>
+        <webprotege:R99moybml6TSD1LLkudrBTe rdf:resource="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=248982007&amp;edition=MAIN/2021-07-31&amp;release=&amp;languages=en"/>
+        <webprotege:RBF8Invk9dtsgp4wQD68WeA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DuLdf_kaOG</webprotege:RBF8Invk9dtsgp4wQD68WeA>
+        <webprotege:RCxRbA67sAZNNYGFNDdGHUe rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">248982007</webprotege:RCxRbA67sAZNNYGFNDdGHUe>
+        <rdfs:label>Pregnancy, childbirth and puerperium (finding)</rdfs:label>
     </owl:Class>
     
 
@@ -257,6 +488,12 @@
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/R94b2ufyejFSwsqqtwNEWA4">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RBdZ9PjAPQbwHzyQfZFeimJ"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBXUleTltJDn3IBLxk0G9KW"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RCYcJMTsWRUnM4fNdRyRf4S"/>
@@ -269,14 +506,156 @@
                 <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCq3BGTw0npB5LMUoVaHMy0"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RDuXbIDxtVhZiI5TPwjwXL4"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <webprotege:R99moybml6TSD1LLkudrBTe rdf:resource="https://health.gov/sites/default/files/2019-09/Physical_Activity_Guidelines_2nd_edition.pdf"/>
         <rdfs:label>Optimising physical activity for adults with anxiety</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://webprotege.stanford.edu/RBKI3nhBTJW0LvT9MoBcGE7 -->
+    <!-- http://webprotege.stanford.edu/R9Hr6e8lcRSnyZb5DG3tTVN -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RBKI3nhBTJW0LvT9MoBcGE7">
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R9Hr6e8lcRSnyZb5DG3tTVN">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Rk3YLsMnUvjlpQFbHZaOwb"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBm0OmTRh9TZw8vdchtiIHL"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBX9yM6PnHMZmCut0ANkwK2"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R383YX9iOJRGPeCAGVVuaj"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBX9yM6PnHMZmCut0ANkwK2"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7JIAyvXh6cPtQsOlCnvlqO"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RDuXbIDxtVhZiI5TPwjwXL4"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R50cgppKmTD8CUgL7h0di2"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R9yiLJcwuXGzG7F5DskM41U"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">150-</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strong scientifc evidence shows that physical activity protects against heart disease, the leading cause of death in people with type 2 diabetes, and can reduce risk of death by 30 to 40 percent. Physical activity helps protect against heart disease and factors related to the progression of type 2 diabetes by helping to reduce the risk factors of high blood pressure, body weight, blood lipids (cholesterol), and elevated hemoglobin A1c in people with type 2 diabetes. The benefcial effects on blood glucose (indicated by hemoglobin A1c) may also reduce other complications of type 2 diabetes. Moderate-intensity activity for at least 150 minutes a week plus 2 days a week of muscle-strengthening activities help to substantially lower the risk of heart disease. A person who moves toward 300 minutes or more of moderate-intensity activity a week gets even greater beneft. Adults with a chronic condition should work with a health care professional or physical activity specialist to adapt physical activity so it is appropriate for their condition. For example, people with diabetes must be especially careful about monitoring their blood glucose, choosing appropriate footwear, and avoiding injury to their feet.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
+        <rdfs:label>Moderate-intensity aerobic physical activity &lt; 150 minutes per week (Diabetes type 2 guideline)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R9LFfuQpUl0y80BjPgncJFP -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R9LFfuQpUl0y80BjPgncJFP">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Rk3YLsMnUvjlpQFbHZaOwb"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBX9yM6PnHMZmCut0ANkwK2"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBKI3nhBTJW0LvT9MoBcGE7"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RDuXbIDxtVhZiI5TPwjwXL4"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RV7MXYVd9mWZbKaOGoTWJy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R50cgppKmTD8CUgL7h0di2"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R9yiLJcwuXGzG7F5DskM41U"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">300-</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">As part of their weekly physical activity, older adults should do multicomponent physical activity that includes balance training as well as aerobic and muscle-strengthening activities. Older adults should determine their level of effort for physical activity relative to their level of ftness. Older adults with chronic conditions should understand whether and how their conditions affect their ability to do regular physical activity safely. When older adults cannot do 150 minutes of moderate-intensity aerobic activity a week because of chronic conditions, they should be as physically active as their abilities and conditions allow. &gt;65 years</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
+        <rdfs:label>Moderate-intensity aerobic physical activity 150 - 300 minutes per week (Over 65 guideline)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R9ZsVb8GA3W7d0bW5TaM3DM -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R9ZsVb8GA3W7d0bW5TaM3DM">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R7AoTIWw5I4W2asgvuzeJ1j"/>
+        <webprotege:RBF8Invk9dtsgp4wQD68WeA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">buXK8LNkIv</webprotege:RBF8Invk9dtsgp4wQD68WeA>
+        <webprotege:RCxRbA67sAZNNYGFNDdGHUe rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64572001</webprotege:RCxRbA67sAZNNYGFNDdGHUe>
+        <rdfs:label>Disease (disorder)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R9eQO8E0lPEv6mTX5tOZ0ww -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R9eQO8E0lPEv6mTX5tOZ0ww">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R9ZsVb8GA3W7d0bW5TaM3DM"/>
+        <webprotege:RCxRbA67sAZNNYGFNDdGHUe rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24700007</webprotege:RCxRbA67sAZNNYGFNDdGHUe>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Multiple Sclerosis (disorder)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R9mnqUZmufdpuIwLBJXxHLY -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R9mnqUZmufdpuIwLBJXxHLY">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R84biDlgk2n4QptR0k030gO"/>
+        <webprotege:RCxRbA67sAZNNYGFNDdGHUe rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">129125009</webprotege:RCxRbA67sAZNNYGFNDdGHUe>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Procedure with explicit context (situation)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R9wNQOspkhA8AfGAD68SsEF -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R9wNQOspkhA8AfGAD68SsEF">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RBdZ9PjAPQbwHzyQfZFeimJ"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RDuXbIDxtVhZiI5TPwjwXL4"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Optimising Physical Activity for adult cancer survivors</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R9yO7lUIY6vIOgVhuwVpK33 -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R9yO7lUIY6vIOgVhuwVpK33">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RBN34Fk8LfGVGjzvP2svABM"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">64&gt;X&gt;18</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBFSR43CmzE3qFfKbn4LzqJ -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RBFSR43CmzE3qFfKbn4LzqJ">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Rk3YLsMnUvjlpQFbHZaOwb"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -286,18 +665,72 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
-                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCvTYcvqROUfXdZhwtTXnyy"/>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBX9yM6PnHMZmCut0ANkwK2"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7JIAyvXh6cPtQsOlCnvlqO"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
-                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RV7MXYVd9mWZbKaOGoTWJy"/>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RDuXbIDxtVhZiI5TPwjwXL4"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This includes balance training as well as aerobic and muscle-strengthening activities</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
-        <rdfs:label>Multicomponent physical activity</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R9yiLJcwuXGzG7F5DskM41U"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">150+</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Examples of vigorous-intensity aerobic physical activity include  jogging, running, carrying heavy groceries or other loads upstairs, shoveling snow, or participating in a strenuous fitness class. In general, if you’re doing vigorous-intensity activity, you will not be able to say more than a few words without pausing for a breath.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vigorous-intensity aerobic physical activity &gt; 150 minutes per week (anxiety)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBG8feHA8jxAyhdoftLPAWr -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RBG8feHA8jxAyhdoftLPAWr">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RBdZ9PjAPQbwHzyQfZFeimJ"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBiZv6Xc90s1jknji99qgDC"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RCYcJMTsWRUnM4fNdRyRf4S"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RC75fRx9ZKTce1gzFciEs4Y"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RDuXbIDxtVhZiI5TPwjwXL4"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Optimising Physical Activity for adults after a hip fracture</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBIf09GkAQNtTGQhEvMi062 -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RBIf09GkAQNtTGQhEvMi062">
+        <webprotege:RBF8Invk9dtsgp4wQD68WeA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uNJHwtH5rf</webprotege:RBF8Invk9dtsgp4wQD68WeA>
+        <webprotege:RCxRbA67sAZNNYGFNDdGHUe rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">243796009</webprotege:RCxRbA67sAZNNYGFNDdGHUe>
+        <rdfs:label>Situation with (explicit context)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBKI3nhBTJW0LvT9MoBcGE7 -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RBKI3nhBTJW0LvT9MoBcGE7">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Rk3YLsMnUvjlpQFbHZaOwb"/>
+        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">As part of their weekly physical activity, older adults should do multicomponent physical activity that includes balance training as well as aerobic and muscle-strengthening activities. Walking backward, standing on one leg, or using a wobble board are examples of balance activities. Recreational activities such as dancing, yoga, tai chi, gardening, or sports can also be considered multicomponent
+because they often incorporate multiple types of physical activity. In general, you should determine your level of effort for physical activity relative to your level of fitness.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Multicomponent physical activity for older adults</rdfs:label>
     </owl:Class>
     
 
@@ -305,7 +738,60 @@
     <!-- http://webprotege.stanford.edu/RBN34Fk8LfGVGjzvP2svABM -->
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/RBN34Fk8LfGVGjzvP2svABM">
-        <rdfs:label>formulas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RBpGUdWMFG9PYM5zHI6owrv"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age formulas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBNoRmGRAGNNVMlclgolCEB -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RBNoRmGRAGNNVMlclgolCEB">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Rk3YLsMnUvjlpQFbHZaOwb"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RgkBJLoGTTDoPvtAsVv6OS"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBX9yM6PnHMZmCut0ANkwK2"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7JIAyvXh6cPtQsOlCnvlqO"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RDuXbIDxtVhZiI5TPwjwXL4"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R50cgppKmTD8CUgL7h0di2"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R9yiLJcwuXGzG7F5DskM41U"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Both aerobic and muscle-strengthening activities are beneficial for people with hypertension. Examples of moderate-intensity physical activity include walking briskly (2.5 to 4mph), playing doubles tennis, or raking the yard. Tai chi is also recommended. In general, if you’re doing moderate-intensity activity, you can talk but not sing during the activity. To get some help in achieving your physical activity goals, try Noom (noom.com), which provides step-by-step support and a personalized plan. People with hypertension should work with their health care provider as they increase their physical activity, as adjustments to medication may be needed.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
+        <rdfs:label>Moderate-intensity aerobic physical activity &gt; 90 minutes per week (Hypertensive guideline)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBO8Me9bjhdZ9egd8Vgwezx -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RBO8Me9bjhdZ9egd8Vgwezx">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R9ZsVb8GA3W7d0bW5TaM3DM"/>
+        <webprotege:R99moybml6TSD1LLkudrBTe rdf:resource="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=396275006&amp;edition=MAIN/2021-07-31&amp;release=&amp;languages=en"/>
+        <webprotege:RBF8Invk9dtsgp4wQD68WeA rdf:resource="https://bbl.health/XOVIkmAF2M"/>
+        <webprotege:RCxRbA67sAZNNYGFNDdGHUe rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">396275006</webprotege:RCxRbA67sAZNNYGFNDdGHUe>
+        <rdfs:label>Osteoarthritis (disorder)</rdfs:label>
     </owl:Class>
     
 
@@ -313,10 +799,11 @@
     <!-- http://webprotege.stanford.edu/RBXUleTltJDn3IBLxk0G9KW -->
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/RBXUleTltJDn3IBLxk0G9KW">
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R7AoTIWw5I4W2asgvuzeJ1j"/>
-        <webprotege:RBF8Invk9dtsgp4wQD68WeA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aKkt9Nd8uh</webprotege:RBF8Invk9dtsgp4wQD68WeA>
-        <webprotege:RCxRbA67sAZNNYGFNDdGHUe rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21897009</webprotege:RCxRbA67sAZNNYGFNDdGHUe>
-        <rdfs:label>Generalized Anxiety Disorder</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R9ZsVb8GA3W7d0bW5TaM3DM"/>
+        <webprotege:R99moybml6TSD1LLkudrBTe rdf:resource="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=197480006&amp;edition=MAIN/2021-07-31&amp;release=&amp;languages=en"/>
+        <webprotege:RBF8Invk9dtsgp4wQD68WeA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">e6tc_Tg7Fd</webprotege:RBF8Invk9dtsgp4wQD68WeA>
+        <webprotege:RCxRbA67sAZNNYGFNDdGHUe rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">197480006</webprotege:RCxRbA67sAZNNYGFNDdGHUe>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anxiety Disorder</rdfs:label>
     </owl:Class>
     
 
@@ -325,6 +812,117 @@
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/RBdZ9PjAPQbwHzyQfZFeimJ">
         <rdfs:label>process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBiZv6Xc90s1jknji99qgDC -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RBiZv6Xc90s1jknji99qgDC">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R7XvH7sM95tEyUt1ilujtY4"/>
+        <webprotege:RBF8Invk9dtsgp4wQD68WeA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cd-gLb5lX1</webprotege:RBF8Invk9dtsgp4wQD68WeA>
+        <webprotege:RCxRbA67sAZNNYGFNDdGHUe rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">428615006</webprotege:RCxRbA67sAZNNYGFNDdGHUe>
+        <rdfs:label>History of operative procedure on hip (situation)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBm0MVhSKaLUafABg84Gd5M -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RBm0MVhSKaLUafABg84Gd5M">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R9ZsVb8GA3W7d0bW5TaM3DM"/>
+        <webprotege:RBF8Invk9dtsgp4wQD68WeA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7FesbDcZ7O</webprotege:RBF8Invk9dtsgp4wQD68WeA>
+        <webprotege:RCxRbA67sAZNNYGFNDdGHUe rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">363346000</webprotege:RCxRbA67sAZNNYGFNDdGHUe>
+        <rdfs:label>Malignant neoplastic disease (disorder)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBm0OmTRh9TZw8vdchtiIHL -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RBm0OmTRh9TZw8vdchtiIHL">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R9ZsVb8GA3W7d0bW5TaM3DM"/>
+        <webprotege:R99moybml6TSD1LLkudrBTe rdf:resource="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=38341003&amp;edition=MAIN/2021-07-31&amp;release=&amp;languages=en"/>
+        <webprotege:RBF8Invk9dtsgp4wQD68WeA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">YoTs_GRdm8</webprotege:RBF8Invk9dtsgp4wQD68WeA>
+        <webprotege:RCxRbA67sAZNNYGFNDdGHUe rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">44054006</webprotege:RCxRbA67sAZNNYGFNDdGHUe>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diabetes Mellitus type 2 (disorder)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBpGUdWMFG9PYM5zHI6owrv -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RBpGUdWMFG9PYM5zHI6owrv">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RBqaLIizeManXOK3tgK94tx"/>
+        <webprotege:R99moybml6TSD1LLkudrBTe rdf:resource="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=397669002&amp;edition=MAIN/2021-07-31&amp;release=&amp;languages=en"/>
+        <webprotege:RBF8Invk9dtsgp4wQD68WeA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">l3AZwGCYgc</webprotege:RBF8Invk9dtsgp4wQD68WeA>
+        <webprotege:RCxRbA67sAZNNYGFNDdGHUe rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">397669002</webprotege:RCxRbA67sAZNNYGFNDdGHUe>
+        <rdfs:label>age (qualifier value)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBqaLIizeManXOK3tgK94tx -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RBqaLIizeManXOK3tgK94tx">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R7K4hu69M8P9tnsveW3mcxm"/>
+        <webprotege:RBF8Invk9dtsgp4wQD68WeA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">arVZXg86Uu</webprotege:RBF8Invk9dtsgp4wQD68WeA>
+        <webprotege:RCxRbA67sAZNNYGFNDdGHUe rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">272099008</webprotege:RCxRbA67sAZNNYGFNDdGHUe>
+        <rdfs:label>Descriptor (qualifier value)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBysKRzhap3GLqr3ovNvcC8 -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RBysKRzhap3GLqr3ovNvcC8">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R9ZsVb8GA3W7d0bW5TaM3DM"/>
+        <webprotege:RCxRbA67sAZNNYGFNDdGHUe rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">417163006</webprotege:RCxRbA67sAZNNYGFNDdGHUe>
+        <rdfs:label>Traumatic or non-traumatic (disorder)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RC75fRx9ZKTce1gzFciEs4Y -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RC75fRx9ZKTce1gzFciEs4Y">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Rk3YLsMnUvjlpQFbHZaOwb"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBiZv6Xc90s1jknji99qgDC"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R50cgppKmTD8CUgL7h0di2"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Regular physical activity can reduce the risk of falls and the extent of an injury from a fall. Physical activity is also important to improve physical function following a hip fracture. Much of the research has been on extended exercise programs beginning after the fracture and has documented improved walking and performancebased measures of gait, balance, strength, and activities of daily living, or self-reported mobility.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
+        <rdfs:label>Physical Activity (Post Hip Fracture)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RCdsrPUfS8tWV64cK5z9YUu -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RCdsrPUfS8tWV64cK5z9YUu">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RBdZ9PjAPQbwHzyQfZFeimJ"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RCYcJMTsWRUnM4fNdRyRf4S"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/Rb8wi0Eq7xhfv8tQ53Lruv"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RDuXbIDxtVhZiI5TPwjwXL4"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RV7MXYVd9mWZbKaOGoTWJy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <webprotege:R99moybml6TSD1LLkudrBTe rdf:resource="https://health.gov/sites/default/files/2019-09/Physical_Activity_Guidelines_2nd_edition.pdf"/>
+        <rdfs:label>Optimising Physical Activity for older adults (over 65)</rdfs:label>
     </owl:Class>
     
 
@@ -342,13 +940,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
-                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCvTYcvqROUfXdZhwtTXnyy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
-                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCvTYcvqROUfXdZhwtTXnyy"/>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBX9yM6PnHMZmCut0ANkwK2"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7JIAyvXh6cPtQsOlCnvlqO"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -365,12 +963,24 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RDuXbIDxtVhZiI5TPwjwXL4"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R50cgppKmTD8CUgL7h0di2"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R9yiLJcwuXGzG7F5DskM41U"/>
                 <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">150-</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moderate intensity aerobic exercise for at least 150 minutes. Examples of moderate physical activity include brisk walking, light cycling, mowing the lawn, and heavy cleaning. You could talk but not sing during moderate physical activity.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moderate intensity aerobic exercise &lt; 150 minutes</rdfs:label>
+        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Examples of moderate-intensity aerobic physical activity include walking briskly (2.5 to 4 mph), playing doubles tennis, or raking the yard. Active forms of yoga (for example, Vinyasa or power yoga) are also recommended. In general, if you’re doing moderate-intensity activity, you can talk but not sing during the activity. Find forms of exercise that are fun or enjoyable. Distract yourself with an iPod or other portable media player to download audiobooks, podcasts, or music. Many people find it’s more fun to exercise while listening to something they enjoy. Recruit an “exercise buddy.” It&apos;s often easier to stick to your exercise routine when you have to stay committed to a friend, partner, or colleague.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moderate-intensity aerobic physical activity at least 150 minutes per week (anxiety)</rdfs:label>
     </owl:Class>
     
 
@@ -389,9 +999,68 @@
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/RCvTYcvqROUfXdZhwtTXnyy">
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R7AoTIWw5I4W2asgvuzeJ1j"/>
+        <webprotege:R99moybml6TSD1LLkudrBTe rdf:resource="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=256235009&amp;edition=MAIN/2021-07-31&amp;release=&amp;languages=en"/>
         <webprotege:RBF8Invk9dtsgp4wQD68WeA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m8tNjSMjkK</webprotege:RBF8Invk9dtsgp4wQD68WeA>
         <webprotege:RCxRbA67sAZNNYGFNDdGHUe rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">366121000000108</webprotege:RCxRbA67sAZNNYGFNDdGHUe>
-        <rdfs:label>inactive</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inactive</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RDCRiHsudMsquDWfo1FztzS -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RDCRiHsudMsquDWfo1FztzS">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RBysKRzhap3GLqr3ovNvcC8"/>
+        <rdfs:label>Spinal Cord Injury (disorder)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RDCxUze7MgNZXtAsI9ivSTs -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RDCxUze7MgNZXtAsI9ivSTs">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Rk3YLsMnUvjlpQFbHZaOwb"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBm0OmTRh9TZw8vdchtiIHL"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBX9yM6PnHMZmCut0ANkwK2"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7JIAyvXh6cPtQsOlCnvlqO"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RDuXbIDxtVhZiI5TPwjwXL4"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R50cgppKmTD8CUgL7h0di2"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R9yiLJcwuXGzG7F5DskM41U"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">300+</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strong scientifc evidence shows that physical activity protects against heart disease, the leading cause of death in people with type 2 diabetes, and can reduce risk of death by 30 to 40 percent. Physical activity helps protect against heart disease and factors related to the progression of type 2 diabetes by helping to reduce the risk factors of high blood pressure, body weight, blood lipids (cholesterol), and elevated hemoglobin A1c in people with type 2 diabetes. The benefcial effects on blood glucose (indicated by hemoglobin A1c) may also reduce other complications of type 2 diabetes. Moderate-intensity activity for at least 150 minutes a week plus 2 days a week of muscle-strengthening activities help to substantially lower the risk of heart disease. A person who moves toward 300 minutes or more of moderate-intensity activity a week gets even greater beneft. Adults with a chronic condition should work with a health care professional or physical activity specialist to adapt physical activity so it is appropriate for their condition. For example, people with diabetes must be especially careful about monitoring their blood glucose, choosing appropriate footwear, and avoiding injury to their feet.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moderate-intensity aerobic physical activity &gt; 300 minutes per week (Diabetes type 2 guideline)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RDIfkvPixMb0kIoM49sPqep -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RDIfkvPixMb0kIoM49sPqep">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RF3JnK8LxaXEyEsITxSzqF"/>
+        <rdfs:label>Extrapyramidal disease (disorder)</rdfs:label>
     </owl:Class>
     
 
@@ -408,8 +1077,14 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
-                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBX9yM6PnHMZmCut0ANkwK2"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7JIAyvXh6cPtQsOlCnvlqO"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBX9yM6PnHMZmCut0ANkwK2"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBFSR43CmzE3qFfKbn4LzqJ"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -420,12 +1095,62 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RDuXbIDxtVhZiI5TPwjwXL4"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R50cgppKmTD8CUgL7h0di2"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R9yiLJcwuXGzG7F5DskM41U"/>
                 <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">75+</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Examples of vigorous physical activity include jogging, hiking, fast cycling, or playing sports like soccer (or football if in the UK) or basketball. You would have to pause and take a breath after a few words during vigorous physical activity.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
-        <rdfs:label>Vigorous aerobic exercise &gt; 75 minutes</rdfs:label>
+        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Examples of vigorous-intensity aerobic physical activity include  jogging, running, carrying heavy groceries or other loads upstairs, shoveling snow, or participating in a strenuous fitness class. In general, if you’re doing vigorous-intensity activity, you will not be able to say more than a few words without pausing for a breath.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vigorous-intensity aerobic physical activity &gt; 75 minutes per week (anxiety)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RDKXSzF13KrasWQv3Amyki3 -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RDKXSzF13KrasWQv3Amyki3">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDIfkvPixMb0kIoM49sPqep"/>
+        <webprotege:RCxRbA67sAZNNYGFNDdGHUe rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32798002</webprotege:RCxRbA67sAZNNYGFNDdGHUe>
+        <rdfs:label>Parkinsonism (disorder)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RDQXWp3m0ChE79jZpxO4gZ6 -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RDQXWp3m0ChE79jZpxO4gZ6">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RBdZ9PjAPQbwHzyQfZFeimJ"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBm0OmTRh9TZw8vdchtiIHL"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RCYcJMTsWRUnM4fNdRyRf4S"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9Hr6e8lcRSnyZb5DG3tTVN"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RDuXbIDxtVhZiI5TPwjwXL4"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <webprotege:R99moybml6TSD1LLkudrBTe rdf:resource="https://health.gov/sites/default/files/2019-09/Physical_Activity_Guidelines_2nd_edition.pdf"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Optimising physical activity for adults with type 2 diabetes</rdfs:label>
     </owl:Class>
     
 
@@ -442,8 +1167,91 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBX9yM6PnHMZmCut0ANkwK2"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7JIAyvXh6cPtQsOlCnvlqO"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RDuXbIDxtVhZiI5TPwjwXL4"/>
                 <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R9yiLJcwuXGzG7F5DskM41U"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">300+</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RB0DOKdI9Zaubwq2uzdoChN"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Examples of moderate-intensity aerobic physical activity include walking briskly (2.5 to 4 mph), playing doubles tennis, or raking the yard. Active forms of yoga (for example, Vinyasa or power yoga) are also recommended. In general, if you’re doing moderate-intensity activity, you can talk but not sing during the activity. Find forms of exercise that are fun or enjoyable. Distract yourself with an iPod or other portable media player to download audiobooks, podcasts, or music. Many people find it’s more fun to exercise while listening to something they enjoy. Recruit an “exercise buddy.” It&apos;s often easier to stick to your exercise routine when you have to stay committed to a friend, partner, or colleague.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moderate-intensity aerobic physical activity for &gt; 300 minutes (anxiety)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RF3JnK8LxaXEyEsITxSzqF -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RF3JnK8LxaXEyEsITxSzqF">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R9ZsVb8GA3W7d0bW5TaM3DM"/>
+        <rdfs:label>Movement Disorder (disorder)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RGDw2gR2NZ6ht7uoAdXWbR -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RGDw2gR2NZ6ht7uoAdXWbR">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R7AoTIWw5I4W2asgvuzeJ1j"/>
+        <webprotege:R99moybml6TSD1LLkudrBTe rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frailty Index (SCTID:  https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1188185/</webprotege:R99moybml6TSD1LLkudrBTe>
+        <webprotege:RBF8Invk9dtsgp4wQD68WeA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">s-Avm9WYUD</webprotege:RBF8Invk9dtsgp4wQD68WeA>
+        <webprotege:RCxRbA67sAZNNYGFNDdGHUe rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">713634000</webprotege:RCxRbA67sAZNNYGFNDdGHUe>
+        <rdfs:label>Frailty (finding)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RKGgAUpPrOIJAf8cksJEQ6 -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RKGgAUpPrOIJAf8cksJEQ6">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RBdZ9PjAPQbwHzyQfZFeimJ"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RGDw2gR2NZ6ht7uoAdXWbR"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RCYcJMTsWRUnM4fNdRyRf4S"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7dg1JjRGx6qnwZJZCLbodg"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RDuXbIDxtVhZiI5TPwjwXL4"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <webprotege:R99moybml6TSD1LLkudrBTe rdf:resource="https://health.gov/sites/default/files/2019-09/Physical_Activity_Guidelines_2nd_edition.pdf"/>
+        <rdfs:label>Optimising physical activity for adults with frailty</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RRNdiFIbDAKXelm3vu558S -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RRNdiFIbDAKXelm3vu558S">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Rk3YLsMnUvjlpQFbHZaOwb"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RgkBJLoGTTDoPvtAsVv6OS"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -454,12 +1262,24 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R9yiLJcwuXGzG7F5DskM41U"/>
-                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">300+</owl:hasValue>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RDuXbIDxtVhZiI5TPwjwXL4"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Examples of moderate physical activity include brisk walking, light cycling, mowing the lawn, and heavy cleaning. You could talk but not sing during moderate physical activity.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
-        <rdfs:label>Moderate physical activity for &gt; 300 minutes</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R50cgppKmTD8CUgL7h0di2"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R9yiLJcwuXGzG7F5DskM41U"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">45-</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Both aerobic and muscle-strengthening activities are benefcial for people with hypertension. Because the benefts of physical activity are actually greater in people with hypertension than in those with normal blood pressure, 45 minutes of vigorous-intensity activity helps to substantially lower the risk of heart disease. A person who moves toward greater amounts of physical activity a week gets even greater beneft. People with hypertension should work with their health care provider as they increase their physical activity, as adjustments to medication may be needed.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
+        <rdfs:label>Vigorous-intensity aerobic physical activity 45 minutes per week (Hypertensive guideline)</rdfs:label>
     </owl:Class>
     
 
@@ -470,6 +1290,46 @@
         <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RBN34Fk8LfGVGjzvP2svABM"/>
         <webprotege:RBKs6yN9NObdBCEiziFKaJM rdf:datatype="http://www.w3.org/2001/XMLSchema#string">year</webprotege:RBKs6yN9NObdBCEiziFKaJM>
         <rdfs:label>X&gt;64</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/Rb8wi0Eq7xhfv8tQ53Lruv -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/Rb8wi0Eq7xhfv8tQ53Lruv">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Rk3YLsMnUvjlpQFbHZaOwb"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBX9yM6PnHMZmCut0ANkwK2"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9LFfuQpUl0y80BjPgncJFP"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBX9yM6PnHMZmCut0ANkwK2"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBKI3nhBTJW0LvT9MoBcGE7"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RDuXbIDxtVhZiI5TPwjwXL4"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RV7MXYVd9mWZbKaOGoTWJy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R50cgppKmTD8CUgL7h0di2"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R9yiLJcwuXGzG7F5DskM41U"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">150-</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">As part of their weekly physical activity, older adults should do multicomponent physical activity that includes balance training as well as aerobic and muscle-strengthening activities. Older adults should determine their level of effort for physical activity relative to their level of ftness. Older adults with chronic conditions should understand whether and how their conditions affect their ability to do regular physical activity safely. When older adults cannot do 150 minutes of moderate-intensity aerobic activity a week because of chronic conditions, they should be as physically active as their abilities and conditions allow.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
+        <rdfs:label>Moderate-intensity aerobic physical activity &lt; 150 minutes per week (Over 65 guideline)</rdfs:label>
     </owl:Class>
     
 
@@ -486,8 +1346,14 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
-                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBX9yM6PnHMZmCut0ANkwK2"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7JIAyvXh6cPtQsOlCnvlqO"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBX9yM6PnHMZmCut0ANkwK2"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDJu4d1rOWQHxYrrwrL6985"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -498,12 +1364,37 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RDuXbIDxtVhZiI5TPwjwXL4"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R50cgppKmTD8CUgL7h0di2"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R9yiLJcwuXGzG7F5DskM41U"/>
                 <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Examples of moderate physical activity include brisk walking, light cycling, mowing the lawn, and heavy cleaning. You could talk but not sing during moderate physical activity.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
-        <rdfs:label>Moderate intensity aerobic exercise &gt; 150 minutes</rdfs:label>
+        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Examples of moderate-intensity physical activity include walking briskly (2.5 to 4
+mph), playing doubles tennis, or raking the yard. Active forms of yoga (for example, Vinyasa or power yoga) are also recommended. In general, if you’re doing moderate-intensity activity, you can talk but not sing during the activity. Find forms of exercise that are fun or enjoyable. Distract yourself with an iPod or other portable media player to download audiobooks, podcasts, or music. Many people find it’s more fun to exercise while listening to something they enjoy. Recruit an “exercise buddy.” It&apos;s often easier to stick to your exercise routine when you have to stay committed to a friend, partner, or colleague.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moderate-intensity aerobic physical activity &gt; 150 minutes per week (anxiety)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RgkBJLoGTTDoPvtAsVv6OS -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RgkBJLoGTTDoPvtAsVv6OS">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R9ZsVb8GA3W7d0bW5TaM3DM"/>
+        <webprotege:R99moybml6TSD1LLkudrBTe rdf:resource="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=38341003&amp;edition=MAIN/2021-07-31&amp;release=&amp;languages=en"/>
+        <webprotege:RBF8Invk9dtsgp4wQD68WeA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kxvgoB1X1b</webprotege:RBF8Invk9dtsgp4wQD68WeA>
+        <webprotege:RCxRbA67sAZNNYGFNDdGHUe rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38341003</webprotege:RCxRbA67sAZNNYGFNDdGHUe>
+        <rdfs:label>Hypertensive disorder, systemic arterial (disorder)</rdfs:label>
     </owl:Class>
     
 
@@ -513,6 +1404,157 @@
     <owl:Class rdf:about="http://webprotege.stanford.edu/Rk3YLsMnUvjlpQFbHZaOwb">
         <rdfs:label>action</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RmZ19Toba8plnQTNQlAeut -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RmZ19Toba8plnQTNQlAeut">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RBdZ9PjAPQbwHzyQfZFeimJ"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R90j3XBf3gjUyXPbwBrqwLj"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RCYcJMTsWRUnM4fNdRyRf4S"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R5KFKLPyLUgB3rbDmvBhub"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <webprotege:R99moybml6TSD1LLkudrBTe rdf:resource="https://health.gov/sites/default/files/2019-09/Physical_Activity_Guidelines_2nd_edition.pdf"/>
+        <rdfs:label>Optimising physicial activity in pregancy and puerperium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RnBJTPozNVjp5OY98eXF2P -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RnBJTPozNVjp5OY98eXF2P">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Rk3YLsMnUvjlpQFbHZaOwb"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBO8Me9bjhdZ9egd8Vgwezx"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R50cgppKmTD8CUgL7h0di2"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R9yiLJcwuXGzG7F5DskM41U"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">People with osteoarthritis should match the type and amount of physical activity to their abilities and the severity of their condition. Most people can usually tolerate doing moderate-intensity activity for 150 minutes a week or more, such as being active 3 to 5 days a week for 30 to 60 minutes per episode. Walking up to 10,000 steps per day does not appear to worsen osteoarthritis of the knee. Some people with osteoarthritis can safely do more than 150 minutes of moderate-intensity activity each week and may be able to tolerate vigorous-intensity activity. Health care professionals typically counsel people with osteoarthritis to do activities that are low impact, not painful, and have low risk of joint injury. Swimming, walking, tai chi, and many musclestrengthening exercises are good examples of this type of activity.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
+        <rdfs:label>Physical Activity (Osteoarthritis)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/Rq6AZAjwMmkXSg5cAeuRrG -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/Rq6AZAjwMmkXSg5cAeuRrG">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Rk3YLsMnUvjlpQFbHZaOwb"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RgkBJLoGTTDoPvtAsVv6OS"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBX9yM6PnHMZmCut0ANkwK2"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7JIAyvXh6cPtQsOlCnvlqO"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBX9yM6PnHMZmCut0ANkwK2"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBNoRmGRAGNNVMlclgolCEB"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RDuXbIDxtVhZiI5TPwjwXL4"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCutN9mVQYl6xeT57Z2cC6F"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R50cgppKmTD8CUgL7h0di2"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/R9yiLJcwuXGzG7F5DskM41U"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">90-</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Both aerobic and muscle-strengthening activities are beneficial for people with hypertension. Because the benefits of physical activity are actually greater in people with hypertension than in those with normal blood pressure, moderate-intensity activity for about 90 minutes a week, or 45 minutes a week of vigorous-intensity activity, helps to substantially lower the risk of heart disease. A person who moves toward greater amounts of physical activity a week gets even greater benefit. Examples of moderate-intensity physical activity include walking briskly (2.5 to 4mph), playing doubles tennis, or raking the yard. Tai chi is also recommended. In general, if you’re doing moderate-intensity activity, you can talk but not sing during the activity. To get some help in achieving your physical activity goals, try Noom (noom.com), which provides step-by-step support and a personalized plan. People with hypertension should work with their health care provider as they increase their physical activity, as adjustments to medication may be needed.</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moderate-intensity aerobic physical activity &lt; 90 minutes per week (Hypertensive guideline)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RupvJ6ZmI2WZIJ8bpfvOfk -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RupvJ6ZmI2WZIJ8bpfvOfk">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Rk3YLsMnUvjlpQFbHZaOwb"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBm0MVhSKaLUafABg84Gd5M"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <webprotege:R9DtWPVELKDzTWPxZMDPCZb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cancer survivors should engage in regular physical activity for its many health benefits. For adults with breast, colorectal, or prostate cancer, greater amounts of physical activity after diagnosis help to substantially lower the risk of dying from their cancer. For adults with breast and colorectal cancer, greater amounts of physical activity after diagnosis also help to substantially lower the risk of dying from any cause. Cancer survivors who are physically active have a better quality of life, improved fitness and physical function, and less fatigue. Physical activity also plays a role in reducing the adverse effects of cancer treatment. As a result of cancer and its treatment, some cancer survivors are at increased risk of heart disease, and physical activity can help reduce this risk. As with other adults with chronic conditions, cancer survivors can consult with a health care professional or physical activity specialist to match a physical activity plan to their abilities, health status, and any treatment toxicities</webprotege:R9DtWPVELKDzTWPxZMDPCZb>
+        <rdfs:label>Physical Activity (Cancer Survivors)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7aRBLr2D90ZSwrpKqX8YCR -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R7aRBLr2D90ZSwrpKqX8YCR">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/RBdZ9PjAPQbwHzyQfZFeimJ"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RCYcJMTsWRUnM4fNdRyRf4S"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8GEtymGxzvMgLrqyzcD14J"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RCYcJMTsWRUnM4fNdRyRf4S"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RCq3BGTw0npB5LMUoVaHMy0"/>
+            </owl:Restriction>
+        </rdf:type>
+        <webprotege:R99moybml6TSD1LLkudrBTe rdf:resource="https://health.gov/sites/default/files/2019-09/Physical_Activity_Guidelines_2nd_edition.pdf"/>
+        <rdfs:label>Optimising physical activity for pregnant adults with anxiety</rdfs:label>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 

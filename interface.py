@@ -3,6 +3,7 @@ import json
 import graphviz as graphviz
 import os
 import requests
+from datetime import date, datetime
 
 from rdflib import Graph, RDF, RDFS
 from rdflib import URIRef
@@ -27,6 +28,7 @@ g.parse("urn_webprotege_ontology_8c5fd0ff-d7ef-4e72-8e06-462eebaba042.owl")#life
 processes = URIRef("http://webprotege.stanford.edu/RBdZ9PjAPQbwHzyQfZFeimJ")
 actions = URIRef("http://webprotege.stanford.edu/Rk3YLsMnUvjlpQFbHZaOwb")
 hasRequirement = URIRef("http://webprotege.stanford.edu/RBKuVxv3Ag9NVQygDL8qwwX")
+hasAgeRequirement = URIRef("http://webprotege.stanford.edu/RDuXbIDxtVhZiI5TPwjwXL4")
 next = URIRef("http://webprotege.stanford.edu/RBX9yM6PnHMZmCut0ANkwK2")
 first = URIRef("http://webprotege.stanford.edu/RCYcJMTsWRUnM4fNdRyRf4S")
 snomed = URIRef("http://webprotege.stanford.edu/RCxRbA67sAZNNYGFNDdGHUe")
@@ -58,6 +60,20 @@ def execute_HG_query(query):
     r = requests.post(url, headers=headers, data=json.dumps(query))
     return json.loads(r.text)
 
+def generate_patient_query(patient_uuid):
+    query_string = """query{
+  getMedicalRecord(member_uuid: \"""" + patient_uuid + """\") {
+    patient{
+      name {
+        family
+        given
+      }
+      gender
+      birthDate
+    }
+  }
+}"""
+    return {"query": query_string}
 
 def generate_reportedcondition_query(patient_uuid, codes):
     query_string = """query {
@@ -92,12 +108,24 @@ def generate_reportedcondition_query(patient_uuid, codes):
 }"""
     return {"query": query_string}
 
-def parseHGResults(results):
+def calculate_age(born):
+    born = born.split("-")
+    born = date(int(born[0]),int(born[1]),int(born[2]))
+    today = date.today()
+    print(today)
+    return today.year - born.year - ((today.month, today.day) < (born.month, born.day))
+
+def parseHGResults(results, birthDate):
     foundList = []
+    bd = calculate_age(birthDate['data']['getMedicalRecord']['patient']['birthDate'])
+
     found = results['data']['getMedicalRecord']['condition']
+
+    st.write(found)
     for el in found:
         print(el)
         foundList.append(el['code']['coding'][0]['code'])
+    foundList.append(bd)
     return foundList
 
 def getUriFromLabel(label):
@@ -146,9 +174,19 @@ def printRequrementsList(action):
             ?x <http://www.w3.org/2002/07/owl#someValuesFrom> ?o .
             }
     """)
+    hasAgeRequirementObject = g.query("""
+        SELECT ?x ?o
+            WHERE { 
+            <"""+str(action)+"""> <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?x .
+            ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+            ?x <http://www.w3.org/2002/07/owl#onProperty> <""" +str(hasAgeRequirement) +"""> .
+            ?x <http://www.w3.org/2002/07/owl#someValuesFrom> ?o .
+            }
+    """)
     RequirementsAction = g.value(action, RDFS.label)
     print("Requirements necessary for "+ str(RequirementsAction) + " action to be advised!")
     reqs = []
+    reqsBD = []
     codes = ""
     system = "https://bbl.health"
     for row in hasRequirementObject:
@@ -160,9 +198,13 @@ def printRequrementsList(action):
         codeString = "{system:\""+system+"\", code:\""+str(co).rstrip()+"\"}, "
         codes = codes + codeString
 
+    for row in hasAgeRequirementObject:
+        print(f"{row.o}")
+        print(g.value(row.o, RDFS.label))
+        reqsBD.append(str(g.value(row.o, RDFS.label)))
 
     print("-------------------------------------------------------------")
-    return(reqs, codes)
+    return(reqs, codes, reqsBD)
 
 def requrementsList(action):
     # hasRequirements list
@@ -175,17 +217,48 @@ def requrementsList(action):
             ?x <http://www.w3.org/2002/07/owl#someValuesFrom> ?o .
             }
     """)
+    # hasAgeRequirementObject = g.query("""
+    #     SELECT ?x ?o
+    #         WHERE {
+    #         <"""+str(action)+"""> <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?x .
+    #         ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+    #         ?x <http://www.w3.org/2002/07/owl#onProperty> <""" +str(hasAgeRequirement) +"""> .
+    #         ?x <http://www.w3.org/2002/07/owl#someValuesFrom> ?o .
+    #         }
+    # """)
     RequirementsAction = g.value(action, RDFS.label)
     #print("Requirements necessary for "+ RequirementsAction + " action to be advised!")
     reqs = []
+    reqsBD = []
     for row in hasRequirementObject:
         #print(f"{row.o}")
         #print(g.value(row.o, RDFS.label))
         reqs.append(str(g.value(row.o, RDFS.label)))
 
+    # for row in hasAgeRequirementObject:
+    #     #print(f"{row.o}")
+    #     #print(g.value(row.o, RDFS.label))
+    #     reqsBD.append(str(g.value(row.o, RDFS.label)))
+
 
     #print("-------------------------------------------------------------")
     return(reqs)
+
+def checkRequirements(patient_contextAction, foundInHG):
+    uri = getUriFromLabel(patient_contextAction)
+    reqs, codes, reqsBD = printRequrementsList(uri)
+
+    reqListYes = []
+    reqListNo = []
+
+    for el in reqs:
+        uriTemp = getUriFromLabel(el)
+        el2 = str(getBabylonCodeFromUri(uriTemp))
+        if el2 in foundInHG:
+            reqListYes.append(el2)
+        else:
+            reqListNo.append(el2)
+    return reqListYes, reqListNo, reqsBD
 
 def printNextAction(action):
     # next action
@@ -209,9 +282,23 @@ def printNextAction(action):
     print("-------------------------------------------------------------")
     return bestActionList
 
+def ageCheck(current_age, formula):
+    agematch = "no age match"
+    if 'X>18' in formula:
+        if current_age > 18:
+            print("X>18")
+            agematch =  "age match"
+    if '64>X>18' in formula:
+        if 64 > current_age > 18:
+            print("64>X>18")
+            agematch = "age match"
+    if 'X<18' in formula:
+        if current_age < 18:
+            print("X<18")
+            agematch = "age match"
+    return agematch
 
-
-def printAllActionsInProcess(action, allActionsInProcessList):
+def printAllActionsInProcess(action, allActionsInProcessList, patient_type, foundInHG):
     # all next actions in process
     hasNextObject = g.query("""
         SELECT ?x ?o
@@ -234,16 +321,29 @@ def printAllActionsInProcess(action, allActionsInProcessList):
         allActionsInProcessList.append("Next "+ str(labelType) +" following the " + str(NextAction) + " action is: " + f"{row.o}" + " - " + str(label))
         print("     Action extended info: " + str(snippet))
         print("     Action requirements: " + str(requirements))
+
+        yesList, noList, ageReq = checkRequirements(str(NextAction), foundInHG)
+        st.write(foundInHG[0])
+        st.write("Yes: " + str(yesList))
+        st.write("No: " + str(noList))
+
+        agepass = ageCheck(int(foundInHG[0]), ageReq)
+        st.write("Age: " + str(ageReq) + "pass: " + agepass)
+        if len(noList) > 0 and agepass == "no age match":
+            graph.node(str(NextAction), fillcolor = "#ff0000",  style="radial")
+        else:
+            graph.node(str(NextAction), fillcolor="#ffafa8", style="radial")
         graph.edge(str(NextAction), str(label))
+
         if row.o:
-            printAllActionsInProcess(row.o, allActionsInProcessList)
+            printAllActionsInProcess(row.o, allActionsInProcessList, patient_type, foundInHG)
         else:
             print("No more actions in this branch!")
             st.write("No more actions in this branch!")
             allActionsInProcessList.append("No more actions in this branch!")
     return allActionsInProcessList
 
-def printFirstActionInProcess(process):
+def printFirstActionInProcess(process, patient_type, foundInHG):
     #all actions in a process
     allActionsInProcessList = []
     hasFirstAction = g.query("""
@@ -264,7 +364,7 @@ def printFirstActionInProcess(process):
         graph.edge(str(processLabel), str(g.value(row.o, RDFS.label)))
 
         #allActionsInProcessList.append(g.value(row.o, RDFS.label))
-        printAllActionsInProcess(row.o, allActionsInProcessList)
+        printAllActionsInProcess(row.o, allActionsInProcessList, patient_type, foundInHG)
     print("-------------------------------------------------------------")
     return allActionsInProcessList
 
@@ -312,7 +412,7 @@ def show(reqs, patient_contextAction, patient_type, foundInHG):
         else:
             reqEl = {"description": el, "done": False}
             reqList.append(reqEl)
-
+    st.write(reqList)
     # Define initial state.
     # if "todos" not in st.session_state:
     #     st.session_state.todos = [
@@ -375,7 +475,7 @@ def main():
 
     patient_type = st.sidebar.selectbox(
         'Load patient data from HealthGraph',
-        ('','Mo', 'Layla', 'Alex'),
+        ('','Mo', 'Layla', 'Alex', 'e744b1bc-3a97-4fd1-bf32-508c70345c32', 'c77c14a5-e31d-4686-9500-cec43c25cb6f', '0421b0f4-0adb-40ec-88b7-ff3454bb6abc', 'fcb395ba-758f-4b64-9f10-5c55fcfbf5ac'),
         index=1
     )
 
@@ -388,13 +488,15 @@ def main():
 
     uri = getUriFromLabel(patient_contextAction)
 
-    reqs, codes = printRequrementsList(uri)
+    reqs, codes, reqsBD = printRequrementsList(uri)
     if reqs:
         if patient_type == "Alex":
             patient_type = "235173f5-1866-4de6-9c53-8b82de10c347"
         query = generate_reportedcondition_query(patient_type, str(codes))
         result = execute_HG_query(query)
-        foundInHG = parseHGResults(result)
+        birthDateQuery = generate_patient_query(patient_type)
+        birthDate = execute_HG_query(birthDateQuery)
+        foundInHG = parseHGResults(result, birthDate)
         if patient_type == "235173f5-1866-4de6-9c53-8b82de10c347":
             patient_type = "Alex"
         show(reqs,patient_contextAction, patient_type, foundInHG)
@@ -421,7 +523,7 @@ def main():
 
     if st.sidebar.button('Show all possible actions after current action for: ' + patient_type):
         allActionsInProcess = []
-        allActionsAfterAction = printAllActionsInProcess(uri, allActionsInProcess)
+        allActionsAfterAction = printAllActionsInProcess(uri, allActionsInProcess, patient_type, foundInHG)
         st.write(allActionsAfterAction)
         text_contents = str(allActionsAfterAction)
         st.download_button('Download suggested path', text_contents)
@@ -437,7 +539,14 @@ def main():
     uri = getUriFromLabel(patient_contextProcess)
 
     if st.sidebar.button('Show all actions in a process'):
-        allActionsInProcess = printFirstActionInProcess(uri)
+        if patient_type == "Alex":
+            patient_type = "235173f5-1866-4de6-9c53-8b82de10c347"
+        query = generate_reportedcondition_query(patient_type, str(codes))
+        birthDateQuery = generate_patient_query(patient_type)
+        result = execute_HG_query(query)
+        birthDate = execute_HG_query(birthDateQuery)
+        foundInHG = parseHGResults(result, birthDate)
+        allActionsInProcess = printFirstActionInProcess(uri, patient_type,foundInHG)
         st.write(allActionsInProcess)
         drawGraph()
 
